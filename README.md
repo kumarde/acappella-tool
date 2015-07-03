@@ -1,1 +1,6 @@
-First Commit of the coolest tool ever
+#Acappella Tool
+
+##Overview
+GAMECHANGING tool to understand individual voice parts and hear them in combinations.
+
+made with hate by mrandrewcho and debug12 :)
