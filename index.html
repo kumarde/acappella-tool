@@ -109,10 +109,13 @@
 		  	</tr>
 		</table>
 
-		<button type="button" onClick="play_Chord()">Play Chord</button>
-
-    <audio id="sopC4">
-      <source src="">
+		<input type="button" onClick="play_Chord()" id="controlButton" value="Play Chord"></input>
+    <!-- loop attribute isn't seamless hmmmmm -->
+    <audio id="sopC4" loop>
+      <source src="audio/test1.mp3">
+    </audio>
+    <audio id="basE2" loop>
+      <source src="audio/test2.mp3">
     </audio>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

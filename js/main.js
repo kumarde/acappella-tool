@@ -5,26 +5,34 @@ function play_Chord() {
   tenAudioId = document.getElementById('tenor-select').value;
   barAudioId = document.getElementById('baritone-select').value;
   basAudioId = document.getElementById('bass-select').value;
-
   listOfNotes = document.getElementsByTagName('audio');
-  for (var i=0; i<listOfNotes.length; i++) {
-    if (listOfNotes[i].id == sopAudioId){
-      listOfNotes[i].play();
+  if (document.getElementById("controlButton").value == "Play Chord"){
+    document.getElementById("controlButton").value = "Stop Chord";
+    for (var i=0; i<listOfNotes.length; i++) {
+      if (listOfNotes[i].id == sopAudioId){
+        listOfNotes[i].play();
+      }
+      if (listOfNotes[i].id == alt1AudioId){
+        listOfNotes[i].play();
+      }
+      if (listOfNotes[i].id == alt2AudioId){
+        listOfNotes[i].play();
+      }
+      if (listOfNotes[i].id == tenAudioId){
+        listOfNotes[i].play();
+      }
+      if (listOfNotes[i].id == barAudioId){
+        listOfNotes[i].play();
+      }
+      if (listOfNotes[i].id == basAudioId){
+        listOfNotes[i].play();
+      }
     }
-    if (listOfNotes[i].id == alt1AudioId){
-      listOfNotes[i].play();
-    }
-    if (listOfNotes[i].id == alt2AudioId){
-      listOfNotes[i].play();
-    }
-    if (listOfNotes[i].id == tenAudioId){
-      listOfNotes[i].play();
-    }
-    if (listOfNotes[i].id == barAudioId){
-      listOfNotes[i].play();
-    }
-    if (listOfNotes[i].id == basAudioId){
-      listOfNotes[i].play();
+  }
+  else {
+    document.getElementById("controlButton").value = "Play Chord";
+    for (var i=0; i<listOfNotes.length; i++) {
+      listOfNotes[i].pause();
     }
   }
 }
