@@ -6,8 +6,8 @@ function play_Chord() {
   barAudioId = document.getElementById('baritone-select').value;
   basAudioId = document.getElementById('bass-select').value;
   listOfNotes = document.getElementsByTagName('audio');
-  if (document.getElementById("controlButton").value == "Play Chord"){
-    document.getElementById("controlButton").value = "Stop Chord";
+  if (document.getElementById("controllerButton").value == "Play Chord"){
+    document.getElementById("controllerButton").value = "Stop Chord";
     for (var i=0; i<listOfNotes.length; i++) {
       if (listOfNotes[i].id == sopAudioId){
         listOfNotes[i].play();

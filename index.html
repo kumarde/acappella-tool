@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/custom.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
@@ -20,96 +21,100 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <table style="width:500px">
-		 	<tr>
-		    	<td>Soprano</td>
-		    	<td>Alto 1</td>
-		    	<td>Alto 2</td>
-		    	<td>Tenor</td>
-		    	<td>Baritone</td>
-		    	<td>Bass</td>
-			</tr>
-		    <tr>
-		    	<td>
-			    	<select id="soprano-select">
-  					  <option value="sopC4">C4</option>
-  					  <option value="sopD4">D4</option>
-  					  <option value="sopE4">E4</option>
-  					  <option value="sopF4">F4</option>
-  					  <option value="sopG4">G4</option>
-  					  <option value="sopA4">A4</option>
-  					  <option value="sopB4">B4</option>
-  					  <option value="sopC5">C5</option>
-  					  <option value="sopD5">D5</option>
-  					  <option value="sopE5">E5</option>
-					</select>
-				</td>
-				<td>
-			    	<select id="alto1-select">
-  					  <option value="alt1C4">C4</option>
-  					  <option value="alt1D4">D4</option>
-  					  <option value="alt1E4">E4</option>
-  					  <option value="alt1F4">F4</option>
-  					  <option value="alt1G4">G4</option>
-  					  <option value="alt1A4">A4</option>
-  					  <option value="alt1B4">B4</option>
-              <option value="alt1C5">C5</option>
-					</select>
-				</td>
-				<td>
-			    	<select id="alto2-select">
-  					  <option value="alt2A3">A3</option>
-  					  <option value="alt2B3">B3</option>
-  					  <option value="alt2C4">C4</option>
-  					  <option value="alt2D4">D4</option>
-  					  <option value="alt2E4">E4</option>
-  					  <option value="alt2F4">F4</option>
-  					  <option value="alt2G4">G4</option>
-  					  <option value="alt2A4">A4</option>
-					</select>
-				</td>
-				<td>
-			    	<select id="tenor-select">
-  					  <option value="tenE3">E3</option>
-  					  <option value="tenF3">F3</option>
-  					  <option value="tenG3">G3</option>
-  					  <option value="tenA3">A3</option>
-  					  <option value="tenB3">B3</option>
-  					  <option value="tenC4">C4</option>
-  					  <option value="tenD4">D4</option>
-  					  <option value="tenE4">E4</option>
-  					  <option value="tenF4">F4</option>
-  					  <option value="tenG4">G4</option>
-					</select>
-				</td>
-				<td>
-			    	<select id="baritone-select">
-  					  <option value="barC3">C3</option>
-  					  <option value="barD3">D3</option>
-  					  <option value="barE3">E3</option>
-  					  <option value="barF3">F3</option>
-  					  <option value="barG3">G3</option>
-  					  <option value="barA3">A3</option>
-  					  <option value="barB3">B3</option>
-  					  <option value="barC4">C4</option>
-					</select>
-				</td>
-				<td>
-			    	<select id="bass-select">
-  					  <option value="basE2">E2</option>
-  					  <option value="basF2">F2</option>
-  					  <option value="basG2">G2</option>
-  					  <option value="basA2">A2</option>
-  					  <option value="basB2">B2</option>
-  					  <option value="basC3">C3</option>
-  					  <option value="basD3">D3</option>
-  					  <option value="basE3">E3</option>
-					</select>
-				</td>
-		  	</tr>
-		</table>
-
-		<input type="button" onClick="play_Chord()" id="controlButton" value="Play Chord"></input>
+      <div class="header">
+        <h1 id="title">AcaTool</h1>
+      </div>
+      <div class="controller-container">
+        <table id="controller-table">
+    		 	<tr>
+    		    	<td>Soprano</td>
+    		    	<td>Alto 1</td>
+    		    	<td>Alto 2</td>
+    		    	<td>Tenor</td>
+    		    	<td>Baritone</td>
+    		    	<td>Bass</td>
+    			</tr>
+    		    <tr>
+    		    	<td>
+    			    	<select id="soprano-select">
+      					  <option value="sopC4">C4</option>
+      					  <option value="sopD4">D4</option>
+      					  <option value="sopE4">E4</option>
+      					  <option value="sopF4">F4</option>
+      					  <option value="sopG4">G4</option>
+      					  <option value="sopA4">A4</option>
+      					  <option value="sopB4">B4</option>
+      					  <option value="sopC5">C5</option>
+      					  <option value="sopD5">D5</option>
+      					  <option value="sopE5">E5</option>
+    					</select>
+    				</td>
+    				<td>
+    			    	<select id="alto1-select">
+      					  <option value="alt1C4">C4</option>
+      					  <option value="alt1D4">D4</option>
+      					  <option value="alt1E4">E4</option>
+      					  <option value="alt1F4">F4</option>
+      					  <option value="alt1G4">G4</option>
+      					  <option value="alt1A4">A4</option>
+      					  <option value="alt1B4">B4</option>
+                  <option value="alt1C5">C5</option>
+    					</select>
+    				</td>
+    				<td>
+    			    	<select id="alto2-select">
+      					  <option value="alt2A3">A3</option>
+      					  <option value="alt2B3">B3</option>
+      					  <option value="alt2C4">C4</option>
+      					  <option value="alt2D4">D4</option>
+      					  <option value="alt2E4">E4</option>
+      					  <option value="alt2F4">F4</option>
+      					  <option value="alt2G4">G4</option>
+      					  <option value="alt2A4">A4</option>
+    					</select>
+    				</td>
+    				<td>
+    			    	<select id="tenor-select">
+      					  <option value="tenE3">E3</option>
+      					  <option value="tenF3">F3</option>
+      					  <option value="tenG3">G3</option>
+      					  <option value="tenA3">A3</option>
+      					  <option value="tenB3">B3</option>
+      					  <option value="tenC4">C4</option>
+      					  <option value="tenD4">D4</option>
+      					  <option value="tenE4">E4</option>
+      					  <option value="tenF4">F4</option>
+      					  <option value="tenG4">G4</option>
+    					</select>
+    				</td>
+    				<td>
+    			    	<select id="baritone-select">
+      					  <option value="barC3">C3</option>
+      					  <option value="barD3">D3</option>
+      					  <option value="barE3">E3</option>
+      					  <option value="barF3">F3</option>
+      					  <option value="barG3">G3</option>
+      					  <option value="barA3">A3</option>
+      					  <option value="barB3">B3</option>
+      					  <option value="barC4">C4</option>
+    					</select>
+    				</td>
+    				<td>
+    			    	<select id="bass-select">
+      					  <option value="basE2">E2</option>
+      					  <option value="basF2">F2</option>
+      					  <option value="basG2">G2</option>
+      					  <option value="basA2">A2</option>
+      					  <option value="basB2">B2</option>
+      					  <option value="basC3">C3</option>
+      					  <option value="basD3">D3</option>
+      					  <option value="basE3">E3</option>
+    					</select>
+    				</td>
+    		  </tr>
+    		</table>
+		    <input type="button" onClick="play_Chord()" id="controllerButton" value="Play Chord"></input>
+    </div>
     <!-- loop attribute isn't seamless hmmmmm -->
     <audio id="sopC4" loop>
       <source src="audio/test1.mp3">

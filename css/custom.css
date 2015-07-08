@@ -1,0 +1,24 @@
+/* ==========================================================================
+  Custom Sheet
+   ========================================================================== */
+
+.header{
+  width:100%;
+}
+
+#title{
+  margin:50px auto;;
+}
+
+.controller-container {
+  width: 500px;
+  margin:50px auto;
+}
+
+#controller-table {
+  width:100%;
+}
+
+#controllerButton {
+  margin: 50px 200px;
+}
